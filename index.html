@@ -5,6 +5,8 @@
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="todo.css"/>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 </head>
 
 <body>
@@ -25,26 +27,20 @@
       </h4>
     </div>
     
-    <div class="col-md-6">
+    <div class="col-md-6" ng-controller="todoController as todoList">
       <h2> TODO list </h2>
+      <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
+      [ <a href="" ng-click="todoList.archive()">archive</a> ]
       <ul>
-        <li class="todoItem">
-          <input type="checkbox">
-          <span >Learn Angular</span>
-        </li>
-        <li class="todoItem">
-          <input type="checkbox">
-          <span>Make this checklist work</span>
-        </li>
-        <li class="todoItem">
-          <input type="checkbox">
-          <span>Commit and push</span>
+        <li class="todoItem" ng-repeat="todo in todoList.todos">
+          <input type="checkbox" ng-model="todo.done">
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
         </li>
       </ul>
   
-      <form>
-        <input type="text" size="30" placeholder="add new todo item here">
-        <input type="submit" value="add">
+      <form ng-submit="todoList.addTodo()">
+        <input type="text" ng-model="todoList.todoText" size="30" placeholder="add new todo item here">
+        <input class="btn-primary" type="submit" value="add">
       </form>
     </div>
   </div>
