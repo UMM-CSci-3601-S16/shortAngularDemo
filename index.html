@@ -30,7 +30,7 @@
     </div>
   </div>
 
-  <div ng-controller="todoController as todoList">
+  <div class="section" ng-controller="todoController as todoList">
       <h2> TODO list </h2>
       <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
       [ <a href="" ng-click="todoList.archive()">archive</a> ]
