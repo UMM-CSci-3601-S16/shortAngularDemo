@@ -1,4 +1,4 @@
-angular.modules.controller('todoListController', function() {
+angular.module("todoApp").controller('todoController', function() {
   var todoList = this;
   todoList.todos = {
     {text: 'attend CSci 3601', done: true},
