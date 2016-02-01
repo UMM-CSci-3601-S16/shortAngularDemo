@@ -31,6 +31,7 @@
   </div>
 
   <div class="section" ng-controller="todoController as todoList">
+    <div>
       <h2> TODO list </h2>
       <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
       [ <a href="" ng-click="todoList.archive()">archive</a> ]
@@ -46,6 +47,7 @@
         <input class="btn-primary" type="submit" value="add">
       </form>
     </div>
+  </div>
 
   <div id="footer">
     <footer>
