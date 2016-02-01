@@ -8,15 +8,15 @@
 </head>
 
 <body>
-  <div id="header">
+  <div id="header" class="jumbotron">
     <header>
       <h1> 3601 Software Design and Development </h1>
       <h5> Short angular demo </h5>
     </header>
   </div>
-
-  <div class="section">
-    <div>
+  
+  <div class="row">
+    <div class="col-md-6">
       <h2>Info</h2>
       <h4>
         This basic HTML site is to be used as an example of how to use Angular and Bootstrap
@@ -24,42 +24,35 @@
         looking for a way to center things!
       </h4>
     </div>
-  </div>
-
-  <div class="section">
-    <div>
+    
+    <div class="col-md-6">
       <h2> TODO list </h2>
       <ul>
-       <li class="todoItem">
-         <input type="checkbox">
-        <span >Learn Angular</span>
-      </li>
-      <li class="todoItem">
-        <input type="checkbox">
-        <span>Make this checklist work</span>
-      </li>
-      <li class="todoItem">
-        <input type="checkbox">
-       <span>Commit and push</span>
-      </li>
-    </ul>
+        <li class="todoItem">
+          <input type="checkbox">
+          <span >Learn Angular</span>
+        </li>
+        <li class="todoItem">
+          <input type="checkbox">
+          <span>Make this checklist work</span>
+        </li>
+        <li class="todoItem">
+          <input type="checkbox">
+          <span>Commit and push</span>
+        </li>
+      </ul>
   
-    <form>
-       <input type="text" size="30" placeholder="add new todo item here">
-      <input type="submit" value="add">
+      <form>
+        <input type="text" size="30" placeholder="add new todo item here">
+        <input type="submit" value="add">
       </form>
     </div>
   </div>
 
-  <div id="footer">
-    <footer>
-      <h4> This website is intended to be a short demo on why we would use Angular.js </h4>
-      <h4> This is a footer </h4>
-    </footer> 
-  </div>
- 
-  
-
+  <footer class="footer">
+    <h4> This website is intended to be a short demo on why we would use Angular.js </h4>
+    <h4> This is a footer </h4>
+  </footer> 
 
 </body>
 </html>
